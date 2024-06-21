@@ -1,0 +1,53 @@
+.weight300-font {
+  font-weight: 300;
+}
+.weight500-font {
+  font-weight: 500;
+}
+.weight600-font {
+  font-weight: 600;
+}
+.weight700-font {
+  font-weight: 700;
+}
+.size10-font {
+  font-size: 10px;
+}
+.size19-font {
+  font-size: 19px;
+}
+.size18-font {
+  font-size: 18px;
+}
+.size20-font {
+  font-size: 20px;
+}
+.size22-font {
+  font-size: 22px;
+}
+.size24-font {
+  font-size: 24px;
+}
+.size26-font {
+  font-size: 26px;
+}
+.size30-font {
+  font-size: 30px;
+}
+.size48-font {
+  font-size: 48px;
+}
+.size70-font {
+  font-size: 70px;
+}
+.size90-font {
+  font-size: 90px;
+}
+
+.gray-color {
+  color: #bfc1c8;
+}
+
+.custom-height {
+  height: auto !important;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+  <title>Weather app</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="csmedia.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header>
+    <nav id="nav" class="navbar navbar-dark navbar-expand-lg bg-body-tertiary main-bg-color py-4">
+      <div class="container px-lg-4 px-sm-5 d-flex justify-content-between align-items-center my-3">
+        <a class="navbar-brand d-flex align-items-center ms-5" href="#">
+          <img src="images/logo.png" alt="Bootstrap" width="64" height="38" class="me-3">
+          <div>
+            <h1 class="weight700-font fs-6 m-0 text-white">Weather</h1>
+            <p class="weight300-font size10-font gray-color m-0">tagline goes here</p>
+          </div>
+        </a>
+        <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="fa-solid fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse me-md-5 custom-nav" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4  d-flex justify-content-end nav-links">
+            <li class="nav-item mx-3 rounded-pill px-3 py-0 home-link">
+              <a class="nav-link text-white my-0 active" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-3 rounded-pill px-3 py-0">
+              <a class="nav-link text-white my-0" href="#">News</a>
+            </li>
+            <li class="nav-item mx-3 rounded-pill px-3 py-0">
+              <a class="nav-link text-white my-0" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item mx-3 rounded-pill px-3 py-0">
+              <a class="nav-link text-white my-0" href="#">Photos</a>
+            </li>
+            <li class="nav-item mx-3 rounded-pill px-3 py-0">
+              <a class="nav-link text-white my-0" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container px-md-5">
+        <div class="find-location position-relative">
+          <input class="form-control border-0 rounded-pill" type="text" name="userLocation" id="weatherSearch"
+            placeholder="Find your location">
+          <button class="find-btn" type="button" value="find" id="searchBtn">Find</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecast-table">
+      <div class="container px-md-5 custom-height">
+        <div class="forecast-container h-100 row gx-0" id="forecastContainer">
+          <div class="col-lg-4">
+            <div class="today forecast">
+              <div class="forecast-header" id="today">
+                <div id="todayDay">Tuesday</div>
+                <div id="todayDate">18June</div>
+              </div>
+
+              <div class="forecast-content" id="current">
+                <div id="location" class="gray-color size18-font">Cairo</div>
+
+                <div class="degree weight700-font size90-font">
+                  <div>
+                    <p id="todayDegreeNum" class="d-inline">30</p>
+                    <sup>o</sup>
+                    <p class="d-inline">C</p>
+                  </div>
+                  <div class="forecast-icon">
+                    <img id="todayIcon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="90">
+                  </div>
+                </div>
+
+                <div id="todayStatus" class="status">Sunny</div>
+
+                <div class="forecast-icons float-start">
+                  <span class="gray-color mx-2"><img src="images/icon-umberella.png" alt="">20%</span>
+                  <span class="gray-color mx-2"><img src="images/icon-wind.png" alt="">18km/h</span>
+                  <span class="gray-color mx-2"><img src="images/icon-compass.png" alt="">East</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" style="background-color: #262936;">
+            <div class="forecast">
+              <div class="forecast-header d-flex justify-content-center" style="background-color: #222530;">
+                <div id="secondDayDay">Wednesday</div>
+              </div>
+              <div class="forecast-content mt-5 d-flex flex-column justify-content-between align-items-center">
+                <div class="forecast-icon my-4">
+                  <img id="secondDayIcon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="50">
+                </div>
+                <div class="degree my-3 weight700-font size24-font">
+                  <p id="secondDayDegreeNum" class="d-inline">40.6</p>
+                  <sup>o</sup>
+                  <p class="d-inline">C</p>
+                </div>
+                <div class="mb-3 weight300-font">
+                  <p id="secondDayDegreeNumMin" class="d-inline">24.7 </p>
+                  <sup>o</sup>
+                  <p class="d-inline">C</p>
+                </div>
+                <div id="secondDayStatus" class="status my-4">Sunny</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4" style="background-color: #323544;">
+            <div class="forecast">
+              <div class="forecast-header d-flex justify-content-center" style="background-color: #2D303D;">
+                <div id="thirdDayDay">Wednesday</div>
+              </div>
+              <div class="forecast-content mt-5 d-flex flex-column justify-content-between align-items-center">
+                <div class="forecast-icon my-4">
+                  <img id="thirdDayIcon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" width="50">
+                </div>
+                <div class="degree my-3 weight700-font size24-font">
+                  <p id="thirdDayDegreeNum" class="d-inline">40.6</p>
+                  <sup>o</sup>
+                  <p class="d-inline">C</p>
+                </div>
+                <div class="mb-3 weight300-font">
+                  <p id="thirdDayDegreeNumMin" class="d-inline">24.7</p>
+                  <sup>o</sup>
+                  <p class="d-inline">C</p>
+                </div>
+                
+                <div id="thirdDayStatus" class="status my-4">Sunny</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter">
+    <div class="container px-md-5">
+      <div class="row gy-3">
+        <div class="col-lg-8">
+          <div class="subscribe-form position-relative">
+            <input class="form-control border-0 rounded-pill" type="text" name="userSubscribe" id="userSubscribe"
+              placeholder="Enter your email to subscribe...">
+            <button class="subscribe-btn" type="submit" value="subscribe">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 offset-lg-1">
+          <div class="footer-links">
+            <ul class="list-unstyled">
+              <li class="d-inline-block">
+                <a href="#">
+                  <div class="footer-links-circle position-relative">
+                    <i class="fa-brands fa-facebook-f size20-font"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li class="d-inline-block">
+                <a href="#">
+                  <div class="footer-links-circle position-relative">
+                    <i class="fa-brands fa-twitter size20-font"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li class="d-inline-block">
+                <a href="#">
+                  <div class="footer-links-circle position-relative">
+                    <i class="fa-brands fa-google-plus-g size20-font"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li class="d-inline-block">
+                <a href="#">
+                  <div class="footer-links-circle position-relative">
+                    <i class="fa-brands fa-pinterest size20-font"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer-caption mt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="myModal" class="modal" tabindex="">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 bg-dark">
+        <div class="modal-header border-0 p-0 pb-1">
+          <div class="circles d-flex gap-1">
+            <span class="rounded-circle"></span>
+            <span class="rounded-circle"></span>
+            <span class="rounded-circle"></span>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="css/bootstrap.bundle.min.js"></script>
+  <script src="java.js"></script>
+</body>
+
+</html>
